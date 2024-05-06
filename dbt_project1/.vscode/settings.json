@@ -1,0 +1,4 @@
+{
+    "dbt.enableNewQueryPanel": false,
+    "dbt.queryScale": 1
+}
