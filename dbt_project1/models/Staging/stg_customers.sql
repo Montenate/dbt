@@ -8,16 +8,15 @@ with source_data as
     name_merge as
     (
         select customer_id,
-        concat(first_name, '  ', last_name) as customer_name,
-        email,
-        address,
-        phone_number,
-        country,
-        age,
-        gender
+            concat(first_name, '  ', last_name) as customer_name,
+            email,
+            address,
+            phone_number,
+            country,
+            age,
+            gender
         from source_data
     )
-
 select * from name_merge
 
 

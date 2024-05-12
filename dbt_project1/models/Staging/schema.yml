@@ -12,38 +12,66 @@ sources:
         columns:
             - name: customer_id
               description: "Primary key for customers table"
+              tests: 
+                - unique
+                - not_null
+                - relationships:
+                    to: ref('instacart_dump', 'orders')
+                    field: customer_id
       - name: orders
         description: "orders records"
         columns:
             - name: order_id
               description: "Primary key for orders table"
+              tests: 
+                - unique
+                - not_null
+            - name: order_status
+              #description: '{{doc("order_status")}}'
+              tests:
+                - accepted_values:
+                    values:
+                      - Delivered
+                      - Shipped
+                      - Processing
       - name: aisles
         description: "aisles records"
         columns:
             - name: aisle_id
               description: "Primary key for aisles table"
+              tests: 
+                - unique
+                - not_null
       - name: products
         description: "products records"
         columns:
             - name: product_id
               description: "Primary key for products table"
+              tests: 
+                - unique
+                - not_null
       - name: payment
         description: "payment records"
         columns:
             - name: payment_id
               description: "Primary key for payment table"
+              tests: 
+                - unique
+                - not_null
       - name: department
         description: "department records"
         columns:
             - name: department_id
               description: "Primary key for department table"
+              tests: 
+                - unique
+                - not_null
       - name: credit_card
         description: "credit_card records"
         columns:
             - name: card_number
               description: "Primary key for credit_card table"
-
-
-
-
+              tests: 
+                - unique
+                - not_null
 

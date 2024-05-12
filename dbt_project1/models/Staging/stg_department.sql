@@ -10,5 +10,4 @@ with source_data as
         department
         from source_data
     )
-
 select * from department_merge

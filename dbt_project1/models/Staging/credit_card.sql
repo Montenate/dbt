@@ -7,10 +7,9 @@ with source_data as
     credit_card_merge as
     (
         select card_number,
-        customer_id,
-        card_expiry_date,
-        bank_name
+                customer_id,
+                card_expiry_date,
+                bank_name
         from source_data
     )
-
 select * from credit_card_merge

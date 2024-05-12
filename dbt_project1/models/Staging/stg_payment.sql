@@ -11,5 +11,4 @@ with source_data as
         payment_date
         from source_data
     )
-
 select * from payment_merge

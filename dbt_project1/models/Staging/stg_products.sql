@@ -15,5 +15,4 @@ with source_data as
         product_category
         from source_data
     )
-
 select * from product_merge

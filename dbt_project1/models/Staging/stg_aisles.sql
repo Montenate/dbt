@@ -11,7 +11,6 @@ with source_data as
         aisle
         from source_data
     )
-
 select * from aisle_merge
 
 
